@@ -133,7 +133,6 @@
         SYMNUM {
             bindings = <
 &kp F1            &kp F2         &kp F3        &kp F4          &kp F5          &kp F6             &kp F7           &kp F8                       &kp F9                    &kp F10                &kp F11                &kp F12
-o
 &kp CARET         &kp TILDE      &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp GRAVE          &td_as           &kp KP_LEFT_PARENTHESIS      &kp KP_RIGHT_PARENTHESIS  &kp KP_LEFT_BRACKET    &kp KP_RIGHT_BRACKET   &kp DOLLAR
 &caps_word        &kp C_VOL_DN   &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp C_VOLUME_UP    &kp LEFT_ARROW   &kp DOWN_ARROW               &kp UP_ARROW              &kp RIGHT_ARROW        &kp SEMI               &kp PIPE
 &kp LC(LEFT_WIN)  &kp UNDERSCORE &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9    &kp N0             &td_pa           &kp LEFT_BRACE               &kp RIGHT_BRACE           &td_gr                 &td_sl                 &kp HASH
