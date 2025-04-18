@@ -132,10 +132,10 @@
 
         SYMNUM {
             bindings = <
-&kp F1            &kp F2          &kp F3        &kp F4          &kp F5          &kp F6             &kp F7           &kp F8                &kp F9                 &kp F10      &kp F11    &kp F12
-&kp CARET         &kp TILDE       &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp GRAVE          &td_as           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT       &kp HASH   &kp DOLLAR
-&caps_word        &kp C_VOL_DN    &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp C_VOLUME_UP    &kp LEFT_ARROW   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT  &kp AMPS   &kp PIPE
-&kp LC(LEFT_WIN)  &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9    &kp N0             &td_pa           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTRK    &kp SLASH  &kp QUESTION
+&kp F1            &kp F2          &kp F3        &kp F4          &kp F5          &kp F6             &kp F7           &kp F8                &kp F9                 &kp F10          &kp F11    &kp F12
+&kp CARET         &kp TILDE       &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp GRAVE          &td_as           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT           &kp HASH   &kp DOLLAR
+&caps_word        &kp C_VOL_DN    &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp C_VOLUME_UP    &kp LEFT_ARROW   &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW  &kp SEMI   &kp PIPE
+&kp LC(LEFT_WIN)  &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9    &kp N0             &td_pa           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTRK        &kp SLASH  &kp QUESTION
                                                 &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW    &kp PLUS         &kp DEL
                                                                 &kp DOWN_ARROW  &mkp RCLK          &kp MINUS
             >;
