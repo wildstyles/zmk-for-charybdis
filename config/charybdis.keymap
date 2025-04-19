@@ -30,49 +30,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
-
-        td_q: tap_dance_q {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp QUESTION>;
-        };
-        td_e: tap_dance_e {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp E>, <&kp EXCLAMATION>;
-        };
-        td_w: tap_dance_w {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp W>, <&kp SQT>;
-        };
-        td_u: tap_dance_u {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp U>, <&kp COMMA>;
-        };
-        td_i: tap_dance_i {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp I>, <&kp DOT>;
-        };
-        td_o: tap_dance_o {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp O>, <&kp KP_MINUS>;
-        };
-        td_p: tap_dance_p {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp P>, <&kp KP_PLUS>;
-        };
         td_qo: tap_dance_qo {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -102,6 +59,30 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp AMPS>, <&kp PERCENT>;
+        };
+        td_sc: tap_dance_sc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SEMICOLON>, <&kp COLON>;
+        };
+        td_br: tap_dance_br {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
+        td_bb: tap_dance_br {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+        td_do: tap_dance_br {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOLLAR>, <&kp AT>;
         };
     };
 
@@ -133,9 +114,9 @@
         SYMNUM {
             bindings = <
 &kp F1            &kp F2          &kp F3        &kp F4          &kp F5          &kp F6             &kp F7           &kp F8                       &kp F9                        &kp F10           &kp F11             &kp F12
-&kp CARET         &kp TILDE       &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp GRAVE          &td_as           &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS         &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp DOLLAR
-&caps_word        &kp C_VOL_DN    &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp C_VOLUME_UP    &kp LEFT_ARROW   &kp DOWN_ARROW               &kp UP_ARROW                  &kp RIGHT_ARROW   &kp HASH            &td_gr
-&kp HASH          &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9    &kp N0             &td_pa           &kp LEFT_BRACE               &kp RIGHT_BRACE               &kp DOT           &kp QUESTION        &td_sl
+&kp TILDE         &kp EXCLAMATION &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp GRAVE          &td_as           &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS         &td_bb            &td_do              &td_gr
+&caps_word        &kp C_VOL_DN    &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp C_VOLUME_UP    &kp LEFT_ARROW   &kp DOWN_ARROW               &kp UP_ARROW                  &kp RIGHT_ARROW   &td_sc              &td_qo
+&kp HASH          &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9    &kp N0             &td_pa           &td_br                       &kp KP_COMMA                  &kp KP_DOT        &kp QUESTION        &td_sl
                                                 &kp KP_EQUAL    &kp KP_PLUS     &kp RIGHT_ARROW    &kp SEMICOLON    &td_qo
                                                                 &kp KP_MINUS    &mkp RCLK          &kp COLON
             >;
