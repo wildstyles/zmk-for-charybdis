@@ -43,11 +43,11 @@
             tapping-term-ms = <200>;
             bindings = <&kp E>, <&kp EXCLAMATION>;
         };
-        td_qo: tap_dance_qo {
+        td_w: tap_dance_w {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SINGLE_QOUTE>, <&kp DOUBLE_QOUTES>;
+            bindings = <&kp W>, <&kp SQT>;
         };
         td_u: tap_dance_u {
             compatible = "zmk,behavior-tap-dance";
@@ -111,7 +111,7 @@
         BASE {
             bindings = <
 &kp TILDE       &kp N1   &kp N2    &kp N3    &kp N4        &kp N5              &kp N6            &kp N7    &kp N8     &kp N9   &kp N0    &kp PIPE
-&kp ESC         &kp Q    &kp W     &kp E     &kp R         &kp T               &kp Y             &kp U     &kp I      &kp O    &kp P     &td_mt
+&kp ESC         &td_q    &td_w     &td_e     &td_r         &kp T               &kp Y             &td_u     &td_i      &td_o    &td_p     &td_mt
 &kp TAB         &kp A    &lt 2 S   &kp D     &kp F         &kp G               &kp H             &kp J     &kp K      &lt 2 L  &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z    &kp X     &kp C     &kp V         &kp B               &kp N             &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                                    &kp CAPS  &kp LEFT_ALT  &kp LEFT_COMMAND    &mt LEFT_ALT RET  &kp BSPC
