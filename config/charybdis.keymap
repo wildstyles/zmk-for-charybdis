@@ -84,12 +84,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp DOLLAR>, <&kp AT>;
         };
-        td_do: tap_dance_do {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DOLLAR>, <&kp AT>;
-        };
     };
 
     keymap {
