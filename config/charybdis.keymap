@@ -111,6 +111,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp LS(LA(LC(F1)))>, <&kp LS(LA(LC(F2)))>;
         };
+
+        td_o: tap_dance_o {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp O>, <&kp SINGLE_QUOTE>;
+        };
     };
 
     keymap {
@@ -118,10 +125,10 @@
 
         BASE {
             bindings = <
-&kp TILDE       &kp N1            &kp N2   &kp N3                     &kp N4                &kp N5       &kp N6            &kp N7                  &kp N8     &kp N9     &kp N0                &kp PIPE
-&kp ESC         &kp Q             &kp W    &kp F                      &kp P                 &kp B        &kp J             &kp L                   &kp U      &kp Y      &kp SEMI              &td_mt
-&kp TAB         &kp A             &lt 2 R  &kp S                      &kp T                 &kp G        &kp M             &kp N                   &kp E      &lt 2 I    &kp O                 &kp SQT
-&kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 3 X  &kp C                      &kp D                 &kp V        &kp K             &kp H                   &kp COMMA  &lt 3 DOT  &mt RIGHT_SHIFT FSLH  &kp RIGHT_SHIFT
+&kp TILDE       &kp N1            &kp N2   &kp N3                     &kp N4                &kp N5       &kp N6            &kp N7                  &kp N8                 &kp N9     &kp N0                &kp PIPE
+&kp ESC         &kp Q             &kp W    &kp F                      &kp P                 &kp B        &kp J             &kp L                   &kp U                  &kp Y      &td_sc                &td_mt
+&kp TAB         &kp A             &lt 2 R  &mt LEFT_SHIFT S           &kp T                 &kp G        &kp M             &kp N                   &mt RIGHT_SHIFT E      &lt 2 I    &td_o                 &kp SQT
+&kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 3 X  &kp C                      &kp D                 &kp V        &kp K             &kp H                   &kp COMMA              &lt 3 DOT  &mt RIGHT_SHIFT FSLH  &kp RIGHT_SHIFT
                                            &mt LEFT_COMMAND KP_EQUAL  &mt LEFT_ALT KP_PLUS  &kp CAPS     &mt LEFT_ALT RET  &mt RIGHT_COMMAND BSPC
                                                                       &mt LCTRL KP_MINUS    &mkp LCLK    &mt RCTRL SPACE
             >;
