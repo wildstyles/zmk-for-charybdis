@@ -127,7 +127,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LEFT_COMMAND SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+            bindings = <&homerow LEFT_COMMAND SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
         };
     };
 
