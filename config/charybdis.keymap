@@ -126,8 +126,9 @@
         td_qoc: tap_dance_qoc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&homerow LEFT_COMMAND SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+            tapping-term-ms = <50>;
+            flavor = "hold-preferred";
+            bindings = <&mt LEFT_COMMAND SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
         };
     };
 
