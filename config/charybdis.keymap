@@ -146,12 +146,12 @@
 
         BASE {
             bindings = <
-&kp TILDE       &kp N1            &kp N2   &kp N3                &kp N4                &kp N5       &kp N6            &kp N7                  &kp N8     &kp N9     &kp N0                &kp PIPE
-&kp ESC         &kp Q             &kp W    &kp F                 &kp P                 &kp B        &kp J             &kp L                   &kp U      &kp Y      &td_sc                &td_mt
-&kp TAB         &kp A             &lt 1 R  &kp S                 &kp T                 &kp G        &kp M             &kp N                   &kp E      &lt 1 I    &kp O                 &kp SQT
-&kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 2 X  &kp C                 &kp D                 &kp V        &kp K             &kp H                   &kp COMMA  &lt 2 DOT  &mt RIGHT_SHIFT FSLH  &kp RIGHT_SHIFT
-                                           &htd LEFT_COMMAND 0   &mt LEFT_ALT COLON    &kp CAPS     &mt LEFT_ALT RET  &mt RIGHT_COMMAND BSPC
-                                                                 &mt LCTRL KP_MINUS    &mkp LCLK    &mt RCTRL SPACE
+&kp TILDE       &kp N1            &kp N2   &kp N3        &kp N4                  &kp N5       &kp N6            &kp N7                  &kp N8     &kp N9     &kp N0                &kp PIPE
+&kp ESC         &kp Q             &kp W    &kp F         &kp P                   &kp B        &kp J             &kp L                   &kp U      &kp Y      &td_sc                &td_mt
+&kp TAB         &kp A             &lt 1 R  &kp S         &kp T                   &kp G        &kp M             &kp N                   &kp E      &lt 1 I    &kp O                 &kp SQT
+&kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 2 X  &kp C         &kp D                   &kp V        &kp K             &kp H                   &kp COMMA  &lt 2 DOT  &mt RIGHT_SHIFT FSLH  &kp RIGHT_SHIFT
+                                           &htd CAPS 0   &mt LEFT_SHIFT COLON    &kp CAPS     &mt LEFT_ALT RET  &mt RIGHT_COMMAND BSPC
+                                                         &mt LCTRL KP_MINUS      &mkp LCLK    &mt RCTRL SPACE
             >;
         };
 
