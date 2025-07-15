@@ -23,7 +23,7 @@
         };
 
         quote {
-            bindings = <&td_qo>;
+            bindings = <&kp LA(BSPC)>;
             key-positions = <43 44>;
         };
     };
