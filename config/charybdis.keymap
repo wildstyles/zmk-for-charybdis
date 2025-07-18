@@ -177,7 +177,7 @@
 &kp TILDE   &kp TILDE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp GRAVE          &td_as          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &td_gr
 &caps_word  &kp TAB         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6              &kp KP_EQUAL       &kp LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW   &kp EXCLAMATION    &td_qo
 &kp HASH    &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9              &kp N0             &td_pa          &kp LEFT_BRACE        &kp RIGHT_BRACE        &td_dc            &kp QUESTION       &td_sl
-                                          &kp KP_EQUAL  &kp KP_PLUS               &kp RIGHT_ARROW    &kp SEMICOLON   &kp RIGHT_COMMAND
+                                          &kp KP_MINUS  &kp KP_PLUS               &kp RIGHT_ARROW    &kp SEMICOLON   &kp RIGHT_COMMAND
                                                         &mt LEFT_SHIFT KP_MINUS   &mkp RCLK          &kp COLON
             >;
         };
@@ -188,7 +188,7 @@
 &kp TILDE   &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR      &kp PERCENT        &kp CARET        &kp AMPS        &kp ASTRK       &td_bb            &td_mt           &td_gr
 &caps_word  &kp C_VOL_DN     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp C_VOLUME_UP    &kp PERCENT      &kp AMPS        &kp ASTRK       &kp DOLLAR        &kp DOLLAR       &td_qo
 &kp HASH    &kp UNDERSCORE   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp N0             &kp KP_EQUAL     &td_br          &kp LESS_THAN   &kp GREATER_THAN  &td_sl           &td_sl
-                                           &kp KP_EQUAL  &mkp RCLK       &kp RIGHT_ARROW    &kp SEMICOLON    &td_qo
+                                           &kp RCLK      &mkp LCLK       &kp RIGHT_ARROW    &kp SEMICOLON    &td_qo
                                                          &mkp LCLK       &mkp RCLK          &kp RIGHT_SHIFT
             >;
         };
