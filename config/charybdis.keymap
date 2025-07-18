@@ -129,6 +129,12 @@
             tapping-term-ms = <200>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
         };
+        td_hc: tap_dance_hc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_MINUS>, <&kp COLON>;
+        };
         htd: htd_kp_space_ctrl {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
@@ -139,6 +145,16 @@
           // hold-trigger-key-positions = <KB_THUMBS KB_RIGHT>;
           // retro-tap;
         };
+        htt: htt_kp_space_ctrl {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <200>;
+          bindings = <&kp>, <&td_hc>;
+          // hold-trigger-key-positions = <KB_THUMBS KB_RIGHT>;
+          // retro-tap;
+        };
     };
 
     keymap {
@@ -146,12 +162,12 @@
 
         BASE {
             bindings = <
-&kp TILDE       &kp N1            &kp N2   &kp N3        &kp N4                  &kp N5       &kp N6            &kp N7                  &kp N8     &kp N9     &kp N0                &kp PIPE
-&kp ESC         &kp Q             &kp W    &kp F         &kp P                   &kp B        &kp J             &kp L                   &kp U      &kp Y      &td_sc                &td_mt
-&kp TAB         &kp A             &lt 1 R  &kp S         &kp T                   &kp G        &kp M             &kp N                   &kp E      &lt 1 I    &kp O                 &kp SQT
-&kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 2 X  &kp C         &kp D                   &kp V        &kp K             &kp H                   &kp COMMA  &lt 2 DOT  &mt RIGHT_SHIFT FSLH  &kp RIGHT_SHIFT
-                                           &htd CAPS 0   &mt LEFT_COMMAND COLON  &kp CAPS     &mt LEFT_ALT RET  &mt CAPS BSPC
-                                                         &mt LCTRL KP_MINUS      &mkp LCLK    &mt RCTRL SPACE
+&kp TILDE       &kp N1            &kp N2   &kp N3                &kp N4                  &kp N5       &kp N6            &kp N7                  &kp N8     &kp N9     &kp N0                &kp PIPE
+&kp ESC         &kp Q             &kp W    &kp F                 &kp P                   &kp B        &kp J             &kp L                   &kp U      &kp Y      &td_sc                &td_mt
+&kp TAB         &kp A             &lt 1 R  &kp S                 &kp T                   &kp G        &kp M             &kp N                   &kp E      &lt 1 I    &kp O                 &kp SQT
+&kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 2 X  &kp C                 &kp D                   &kp V        &kp K             &kp H                   &kp COMMA  &lt 2 DOT  &mt RIGHT_SHIFT FSLH  &kp RIGHT_SHIFT
+                                           &htd LEFT_COMMAND 0   &htt LCTRL 0            &kp CAPS     &mt LEFT_ALT RET  &mt CAPS BSPC
+                                                                 &mt LCTRL KP_MINUS      &mkp LCLK    &mt RCTRL SPACE
             >;
         };
 
