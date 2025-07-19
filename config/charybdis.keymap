@@ -166,7 +166,7 @@
 &kp ESC         &kp Q             &kp W    &kp F                 &kp P                   &kp B        &kp J             &kp L                   &kp U      &kp Y      &td_sc                &td_mt
 &kp TAB         &kp A             &lt 1 R  &kp S                 &kp T                   &kp G        &kp M             &kp N                   &kp E      &lt 1 I    &kp O                 &kp SQT
 &kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 2 X  &kp C                 &kp D                   &kp V        &kp K             &kp H                   &kp COMMA  &lt 2 DOT  &mt RIGHT_SHIFT FSLH  &kp RIGHT_SHIFT
-                                           &htd LEFT_COMMAND 0   &htt LCTRL 0            &kp CAPS     &mt LEFT_ALT RET  &mt CAPS BSPC
+                                           &htd LEFT_COMMAND 0   &mt LCTRL SPACE         &kp CAPS     &mt LEFT_ALT RET  &mt CAPS BSPC
                                                                  &mt LCTRL KP_MINUS      &mkp LCLK    &mt RCTRL SPACE
             >;
         };
@@ -177,7 +177,7 @@
 &kp TILDE   &kp TILDE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp GRAVE          &td_as          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &td_gr
 &caps_word  &kp TAB         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6              &kp KP_EQUAL       &kp LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW   &kp EXCLAMATION    &td_qo
 &kp HASH    &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9              &kp N0             &td_pa          &kp LEFT_BRACE        &kp RIGHT_BRACE        &td_dc            &kp QUESTION       &td_sl
-                                          &kp KP_MINUS  &kp KP_PLUS               &kp RIGHT_ARROW    &kp SEMICOLON   &kp RIGHT_COMMAND
+                                          &kp KP_MINUS  &kp KP_PLUS               &kp RIGHT_ARROW    &kp COLON       &kp RIGHT_COMMAND
                                                         &mt LEFT_SHIFT KP_MINUS   &mkp RCLK          &kp COLON
             >;
         };
