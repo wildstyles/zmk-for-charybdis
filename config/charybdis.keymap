@@ -177,7 +177,7 @@
 &kp TILDE   &kp TILDE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp GRAVE          &td_as          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &td_gr
 &caps_word  &kp TAB         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6              &kp KP_EQUAL       &kp LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW   &kp EXCLAMATION    &td_qo
 &kp HASH    &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9              &kp N0             &td_pa          &kp LEFT_BRACE        &kp RIGHT_BRACE        &td_dc            &kp QUESTION       &td_sl
-                                          &kp KP_MINUS  &kp KP_PLUS               &kp RIGHT_ARROW    &kp COLON       &kp RIGHT_COMMAND
+                                          &kp KP_MINUS  &kp KP_PLUS               &kp RIGHT_ARROW    &kp KP_MINUS    &kp KP_PLUS
                                                         &mt LEFT_SHIFT KP_MINUS   &mkp RCLK          &kp COLON
             >;
         };
