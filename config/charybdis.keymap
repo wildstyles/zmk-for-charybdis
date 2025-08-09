@@ -184,12 +184,12 @@
 
         SYMNUM1 {
             bindings = <
-&kp F1      &kp F2           &kp F3        &kp F4        &kp F5          &kp F6             &kp F7           &kp F8          &kp F9          &kp F10           &kp F11          &kp F12
-&kp TILDE   &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR      &kp PERCENT        &kp CARET        &kp AMPS        &kp ASTRK       &td_bb            &td_mt           &td_gr
-&caps_word  &kp C_VOL_DN     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp C_VOLUME_UP    &kp PERCENT      &kp AMPS        &kp ASTRK       &kp DOLLAR        &kp DOLLAR       &td_qo
-&kp HASH    &kp UNDERSCORE   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp N0             &kp KP_EQUAL     &td_br          &kp LESS_THAN   &kp GREATER_THAN  &td_sl           &td_sl
-                                           &kp RCLK      &mkp LCLK       &kp RIGHT_ARROW    &kp SEMICOLON    &td_qo
-                                                         &mkp LCLK       &mkp RCLK          &kp RIGHT_SHIFT
+&kp F1      &kp F2           &kp F3        &kp F4         &kp F5          &kp F6             &kp F7           &kp F8          &kp F9          &kp F10           &kp F11          &kp F12
+&kp TILDE   &kp EXCLAMATION  &kp AT        &kp HASH       &kp DOLLAR      &kp PERCENT        &kp CARET        &kp AMPS        &kp ASTRK       &td_bb            &td_mt           &td_gr
+&caps_word  &kp C_VOL_DN     &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6    &kp C_VOLUME_UP    &kp PERCENT      &kp AMPS        &kp ASTRK       &kp DOLLAR        &kp DOLLAR       &td_qo
+&kp HASH    &kp UNDERSCORE   &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9    &kp N0             &kp KP_EQUAL     &td_br          &kp LESS_THAN   &kp GREATER_THAN  &td_sl           &td_sl
+                                           &mkp RCLK      &mkp LCLK       &kp RIGHT_ARROW    &kp SEMICOLON    &td_qo
+                                                          &mkp LCLK       &mkp RCLK          &kp RIGHT_SHIFT
             >;
         };
     };
