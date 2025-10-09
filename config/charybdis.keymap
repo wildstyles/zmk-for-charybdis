@@ -3,6 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
@@ -179,7 +180,7 @@
 
         BASE {
             bindings = <
-&kp TILDE       &kp F5            &kp N2   &kp N3               &kp N4              &kp N5       &kp N6            &kp N7         &kp N8     &kp N9     &kp N0                &bt BT_CLR
+&kp TILDE       &kp F5            &kp F5   &kp N3               &kp N4              &kp N5       &kp N6            &kp N7         &kp N8     &kp N9     &kp N0                &bt BT_CLR
 &kp ESC         &kp Q             &kp W    &kp F                &kp P               &kp B        &kp J             &kp L          &kp U      &kp Y      &td_sc                &td_mt
 &kp TAB         &kp A             &lt 1 R  &kp S                &kp T               &kp G        &kp M             &kp N          &kp E      &lt 1 I    &kp O                 &bt BT_SEL 0
 &kp LEFT_SHIFT  &mt LEFT_SHIFT Z  &lt 2 X  &kp C                &kp D               &kp V        &kp K             &kp H          &kp COMMA  &lt 2 DOT  &mt RIGHT_SHIFT FSLH  &bt BT_SEL 1
