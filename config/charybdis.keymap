@@ -39,7 +39,7 @@
         };
 
         enter2 {
-            bindings = <&kp LA(ENTER)>;
+            bindings = <&kp ENTER>;
             key-positions = <43 44>;
         };
     };
