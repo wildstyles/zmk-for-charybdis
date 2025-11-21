@@ -3,7 +3,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
@@ -185,34 +184,73 @@
 
         BASE {
             bindings = <
-&kp TILDE         &kp F1            &kp F5   &kp N3               &kp N4              &kp N5       &kp N6           &kp N7         &kp N8     &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_CLR
-&kp ESC           &kp Q             &kp W    &kp F                &kp P               &kp B        &kp J            &kp L          &kp U      &kp Y         &td_sc                &td_mt
-&mt LEFT_ALT RET  &kp A             &lt 1 R  &kp S                &kp T               &kp G        &kp M            &kp N          &kp E      &lt 1 I       &kp O                 &htd LEFT_COMMAND 0
-&kp LEFT_SHIFT    &mt LEFT_SHIFT Z  &lt 2 X  &kp C                &kp D               &kp V        &kp K            &kp H          &kp COMMA  &lt 2 DOT     &mt RIGHT_SHIFT FSLH  &bt BT_SEL 1
-                                             &htd LEFT_COMMAND 0  &mt LCTRL SPACE     &kp CAPS     &mt CAPS BSPC    &mt CAPS BSPC
-                                                                  &mt LCTRL KP_MINUS  &mkp LCLK    &mt RCTRL SPACE
+//    ┌─────────────┬───────────┬────────┬─────────────┬──────────────┬──────┐   ┌──────────────┬──────────────┬───┬──────────┬───────────┬─────────────┐
+//    │      ~      │    f1     │   f5   │      3      │      4       │  5   │   │      6       │      7       │ 8 │ bt_sel 0 │ bt_sel 1  │   bt_clr    │
+//    ├─────────────┼───────────┼────────┼─────────────┼──────────────┼──────┤   ├──────────────┼──────────────┼───┼──────────┼───────────┼─────────────┤
+//    │     esc     │     Q     │   W    │      F      │      P       │  B   │   │      J       │      L       │ U │    Y     │  &td_sc   │   &td_mt    │
+//    ├─────────────┼───────────┼────────┼─────────────┼──────────────┼──────┤   ├──────────────┼──────────────┼───┼──────────┼───────────┼─────────────┤
+//    │ mt lalt ent │     A     │ lt 1 R │      S      │      T       │  G   │   │      M       │      N       │ E │  lt 1 I  │     O     │ &htd lgui 0 │
+//    ├─────────────┼───────────┼────────┼─────────────┼──────────────┼──────┤   ├──────────────┼──────────────┼───┼──────────┼───────────┼─────────────┤
+//    │    lsft     │ mt lsft Z │ lt 2 X │      C      │      D       │  V   │   │      K       │      H       │ , │  lt 2 .  │ mt rsft / │  bt_sel 1   │
+//    └─────────────┴───────────┴────────┼─────────────┼──────────────┼──────┤   ├──────────────┼──────────────┼───┴──────────┴───────────┴─────────────┘
+//                                       │ &htd lgui 0 │ mt lctl spc  │ caps │   │ mt caps bspc │ mt caps bspc │
+//                                       └─────────────┼──────────────┼──────┤   ├──────────────┼──────────────┘
+//                                                     │ mt lctl kp_- │ lclk │   │ mt rctl spc  │
+//                                                     └──────────────┴──────┘   └──────────────┘
+  &kp TILDE          &kp F1             &kp F5    &kp N3                &kp N4               &kp N5          &kp N6            &kp N7          &kp N8      &bt BT_SEL 0   &bt BT_SEL 1           &bt BT_CLR
+  &kp ESC            &kp Q              &kp W     &kp F                 &kp P                &kp B           &kp J             &kp L           &kp U       &kp Y          &td_sc                 &td_mt
+  &mt LEFT_ALT RET   &kp A              &lt 1 R   &kp S                 &kp T                &kp G           &kp M             &kp N           &kp E       &lt 1 I        &kp O                  &htd LEFT_COMMAND 0
+  &kp LEFT_SHIFT     &mt LEFT_SHIFT Z   &lt 2 X   &kp C                 &kp D                &kp V           &kp K             &kp H           &kp COMMA   &lt 2 DOT      &mt RIGHT_SHIFT FSLH   &bt BT_SEL 1
+                                                  &htd LEFT_COMMAND 0   &mt LCTRL SPACE      &kp CAPS        &mt CAPS BSPC     &mt CAPS BSPC
+                                                                        &mt LCTRL KP_MINUS   &mkp LCLK       &mt RCTRL SPACE
             >;
         };
 
         SYMNUM {
             bindings = <
-&kp F1      &kp F2          &kp F3        &kp F4        &kp F5                   &kp F6             &kp F7          &kp F8                &kp F9                 &kp F10           &kp F11            &kp F12
-&kp TILDE   &kp TILDE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3             &kp GRAVE          &td_as          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &td_gr
-&caps_word  &kp TAB         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6             &kp KP_EQUAL       &kp LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW   &kp EXCLAMATION    &kp KP_MINUS
-&kp HASH    &kp UNDERSCORE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9             &kp N0             &td_pa          &kp LEFT_BRACE        &kp RIGHT_BRACE        &td_dc            &kp QUESTION       &td_sl
-                                          &kp KP_MINUS  &kp KP_PLUS              &kp RIGHT_ARROW    &kp KP_MINUS    &kp KP_PLUS
-                                                        &mt LEFT_SHIFT KP_MINUS  &mkp RCLK          &kp COLON
+//    ┌───────┬─────┬────┬──────┬──────────────┬──────┐   ┌────────┬──────┬────┬────────┬─────┬────────┐
+//    │  f1   │ f2  │ f3 │  f4  │      f5      │  f6  │   │   f7   │  f8  │ f9 │  f10   │ f11 │  f12   │
+//    ├───────┼─────┼────┼──────┼──────────────┼──────┤   ├────────┼──────┼────┼────────┼─────┼────────┤
+//    │   ~   │  ~  │ 1  │  2   │      3       │  `   │   │ &td_as │  (   │ )  │   [    │  ]  │ &td_gr │
+//    ├───────┼─────┼────┼──────┼──────────────┼──────┤   ├────────┼──────┼────┼────────┼─────┼────────┤
+//    │ capsw │ tab │ 4  │  5   │      6       │ kp_= │   │  left  │ down │ up │  rght  │  !  │  kp_-  │
+//    ├───────┼─────┼────┼──────┼──────────────┼──────┤   ├────────┼──────┼────┼────────┼─────┼────────┤
+//    │   #   │  _  │ 7  │  8   │      9       │  0   │   │ &td_pa │  {   │ }  │ &td_dc │  ?  │ &td_sl │
+//    └───────┴─────┴────┼──────┼──────────────┼──────┤   ├────────┼──────┼────┴────────┴─────┴────────┘
+//                       │ kp_- │     kp_+     │ rght │   │  kp_-  │ kp_+ │
+//                       └──────┼──────────────┼──────┤   ├────────┼──────┘
+//                              │ mt lsft kp_- │ rclk │   │   :    │
+//                              └──────────────┴──────┘   └────────┘
+  &kp F1       &kp F2           &kp F3         &kp F4         &kp F5                    &kp F6                &kp F7           &kp F8                 &kp F9                  &kp F10            &kp F11             &kp F12
+  &kp TILDE    &kp TILDE        &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3              &kp GRAVE             &td_as           &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &td_gr
+  &caps_word   &kp TAB          &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6              &kp KP_EQUAL          &kp LEFT_ARROW   &kp DOWN_ARROW         &kp UP_ARROW            &kp RIGHT_ARROW    &kp EXCLAMATION     &kp KP_MINUS
+  &kp HASH     &kp UNDERSCORE   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9              &kp N0                &td_pa           &kp LEFT_BRACE         &kp RIGHT_BRACE         &td_dc             &kp QUESTION        &td_sl
+                                               &kp KP_MINUS   &kp KP_PLUS               &kp RIGHT_ARROW       &kp KP_MINUS     &kp KP_PLUS
+                                                              &mt LEFT_SHIFT KP_MINUS   &mkp RCLK             &kp COLON
             >;
         };
 
         SYMNUM1 {
             bindings = <
-&kp F1      &kp F2                &kp F3        &kp F4        &kp F5        &kp F6                  &kp F7           &kp F8    &kp F9         &kp F10           &kp F11     &kp F12
-&kp TILDE   &kp EXCLAMATION       &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT             &kp CARET        &kp AMPS  &kp ASTRK      &td_bb            &td_mt      &td_gr
-&caps_word  &kp C_VOL_DN          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOLUME_UP         &kp PERCENT      &kp AMPS  &kp ASTRK      &kp DOLLAR        &kp DOLLAR  &mkp RCLK
-&kp HASH    &kp C_BRIGHTNESS_DEC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_BRIGHTNESS_INC    &kp KP_EQUAL     &td_br    &kp LESS_THAN  &kp GREATER_THAN  &td_sl      &td_sl
-                                                &mkp RCLK     &mkp LCLK     &kp RIGHT_ARROW         &kp SEMICOLON    &td_qo
-                                                              &mkp LCLK     &mkp RCLK               &kp RIGHT_SHIFT
+//    ┌───────┬──────┬────┬──────┬──────┬──────┐   ┌──────┬────────┬────┬────────┬────────┬────────┐
+//    │  f1   │  f2  │ f3 │  f4  │  f5  │  f6  │   │  f7  │   f8   │ f9 │  f10   │  f11   │  f12   │
+//    ├───────┼──────┼────┼──────┼──────┼──────┤   ├──────┼────────┼────┼────────┼────────┼────────┤
+//    │   ~   │  !   │ @  │  #   │  $   │  %   │   │  ^   │   &    │ *  │ &td_bb │ &td_mt │ &td_gr │
+//    ├───────┼──────┼────┼──────┼──────┼──────┤   ├──────┼────────┼────┼────────┼────────┼────────┤
+//    │ capsw │ vold │ 4  │  5   │  6   │ volu │   │  %   │   &    │ *  │   $    │   $    │  rclk  │
+//    ├───────┼──────┼────┼──────┼──────┼──────┤   ├──────┼────────┼────┼────────┼────────┼────────┤
+//    │   #   │ bri- │ 7  │  8   │  9   │ bri+ │   │ kp_= │ &td_br │ <  │   >    │ &td_sl │ &td_sl │
+//    └───────┴──────┴────┼──────┼──────┼──────┤   ├──────┼────────┼────┴────────┴────────┴────────┘
+//                        │ rclk │ lclk │ rght │   │  ;   │ &td_qo │
+//                        └──────┼──────┼──────┤   ├──────┼────────┘
+//                               │ lclk │ rclk │   │ rsft │
+//                               └──────┴──────┘   └──────┘
+  &kp F1       &kp F2                 &kp F3         &kp F4         &kp F5         &kp F6                     &kp F7            &kp F8     &kp F9          &kp F10            &kp F11      &kp F12
+  &kp TILDE    &kp EXCLAMATION        &kp AT         &kp HASH       &kp DOLLAR     &kp PERCENT                &kp CARET         &kp AMPS   &kp ASTRK       &td_bb             &td_mt       &td_gr
+  &caps_word   &kp C_VOL_DN           &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6   &kp C_VOLUME_UP            &kp PERCENT       &kp AMPS   &kp ASTRK       &kp DOLLAR         &kp DOLLAR   &mkp RCLK
+  &kp HASH     &kp C_BRIGHTNESS_DEC   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9   &kp C_BRIGHTNESS_INC       &kp KP_EQUAL      &td_br     &kp LESS_THAN   &kp GREATER_THAN   &td_sl       &td_sl
+                                                     &mkp RCLK      &mkp LCLK      &kp RIGHT_ARROW            &kp SEMICOLON     &td_qo
+                                                                    &mkp LCLK      &mkp RCLK                  &kp RIGHT_SHIFT
             >;
         };
     };
