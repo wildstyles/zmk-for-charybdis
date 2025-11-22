@@ -150,7 +150,7 @@
         td_qq: tap_dance_qq {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp Q>, <&kp ESC>;
         };
 
