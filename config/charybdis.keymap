@@ -154,6 +154,20 @@
             bindings = <&kp Q>, <&kp ESC>;
         };
 
+        td_cc: tap_dance_cc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp LCMD(C)>;
+        };
+
+        td_vv: tap_dance_vv {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp V>, <&kp LCMD(V)>;
+        };
+
         td_hc: tap_dance_hc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -203,25 +217,25 @@
 
         BASE {
             bindings = <
-//    ┌─────────────┬───────────┬────────┬─────┬─────────────┬─────┐   ┌─────┬──────────────┬─────┬──────────┬───────────┬─────────────┐
-//    │             │    f1     │   f5   │     │             │     │   │     │              │     │ bt_sel 0 │ bt_sel 1  │   bt_clr    │
-//    ├─────────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
-//    │     esc     │  &td_qq   │   W    │  F  │      P      │  B  │   │  J  │      L       │  U  │    Y     │  &td_sc   │             │
-//    ├─────────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
-//    │ &htd lgui 0 │     A     │ lt 1 R │  S  │      T      │  G  │   │  M  │      N       │  E  │  lt 1 I  │     O     │ mt lalt ent │
-//    ├─────────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
-//    │             │ mt lsft Z │ lt 2 X │  C  │      D      │  V  │   │  K  │      H       │  ,  │  lt 2 .  │ mt rsft / │             │
-//    └─────────────┴───────────┴────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┴──────────┴───────────┴─────────────┘
-//                                       │     │ mt lctl spc │     │   │     │ mt caps bspc │
-//                                       └─────┼─────────────┼─────┤   ├─────┼──────────────┘
-//                                             │             │     │   │     │
-//                                             └─────────────┴─────┘   └─────┘
-  &none                 &kp F1             &kp F5    &none   &none             &none       &none   &none           &none       &bt BT_SEL 0   &bt BT_SEL 1            &bt BT_CLR
-  &kp ESC               &td_qq             &kp W     &kp F   &kp P             &kp B       &kp J   &kp L           &kp U       &kp Y          &td_sc                  &none
-  &htd LEFT_COMMAND 0   &kp A              &lt 1 R   &kp S   &kp T             &kp G       &kp M   &kp N           &kp E       &lt 1 I        &kp O                   &mt LEFT_ALT RET
-  &none                 &mt LEFT_SHIFT Z   &lt 2 X   &kp C   &kp D             &kp V       &kp K   &kp H           &kp COMMA   &lt 2 DOT      &mt RIGHT_SHIFT SLASH   &none
-                                                     &none   &mt LCTRL SPACE   &none       &none   &mt CAPS BSPC
-                                                             &none             &none       &none
+//    ┌─────────────┬───────────┬────────┬────────┬─────────────┬────────┐   ┌─────┬──────────────┬─────┬──────────┬───────────┬─────────────┐
+//    │             │    f1     │   f5   │        │             │        │   │     │              │     │ bt_sel 0 │ bt_sel 1  │   bt_clr    │
+//    ├─────────────┼───────────┼────────┼────────┼─────────────┼────────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
+//    │     esc     │  &td_qq   │   W    │   F    │      P      │   B    │   │  J  │      L       │  U  │    Y     │  &td_sc   │             │
+//    ├─────────────┼───────────┼────────┼────────┼─────────────┼────────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
+//    │ &htd lgui 0 │     A     │ lt 1 R │   S    │      T      │   G    │   │  M  │      N       │  E  │  lt 1 I  │     O     │ mt lalt ent │
+//    ├─────────────┼───────────┼────────┼────────┼─────────────┼────────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
+//    │             │ mt lsft Z │ lt 2 X │ &td_cc │      D      │ &td_vv │   │  K  │      H       │  ,  │  lt 2 .  │ mt rsft / │             │
+//    └─────────────┴───────────┴────────┼────────┼─────────────┼────────┤   ├─────┼──────────────┼─────┴──────────┴───────────┴─────────────┘
+//                                       │        │ mt lctl spc │        │   │     │ mt caps bspc │
+//                                       └────────┼─────────────┼────────┤   ├─────┼──────────────┘
+//                                                │             │        │   │     │
+//                                                └─────────────┴────────┘   └─────┘
+  &none                 &kp F1             &kp F5    &none    &none             &none        &none   &none           &none       &bt BT_SEL 0   &bt BT_SEL 1            &bt BT_CLR
+  &kp ESC               &td_qq             &kp W     &kp F    &kp P             &kp B        &kp J   &kp L           &kp U       &kp Y          &td_sc                  &none
+  &htd LEFT_COMMAND 0   &kp A              &lt 1 R   &kp S    &kp T             &kp G        &kp M   &kp N           &kp E       &lt 1 I        &kp O                   &mt LEFT_ALT RET
+  &none                 &mt LEFT_SHIFT Z   &lt 2 X   &td_cc   &kp D             &td_vv       &kp K   &kp H           &kp COMMA   &lt 2 DOT      &mt RIGHT_SHIFT SLASH   &none
+                                                     &none    &mt LCTRL SPACE   &none        &none   &mt CAPS BSPC
+                                                              &none             &none        &none
             >;
         };
 
