@@ -158,14 +158,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp C>, <&kp LCMD(C)>;
+            bindings = <&kp C>, <&kp LG(C)>;
         };
 
         td_vv: tap_dance_vv {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp V>, <&kp LCMD(V)>;
+            bindings = <&kp V>, <&kp LG(V)>;
         };
 
         td_hc: tap_dance_hc {
