@@ -241,15 +241,15 @@
 
         SYMNUM {
             bindings = <
-//    ┌───────┬─────┬─────┬─────┬──────┬──────┐   ┌─────────┬──────┬─────┬──────┬─────────┬──────┐
-//    │       │     │     │     │      │      │   │         │      │     │      │         │      │
-//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼──────┼─────────┼──────┤
-//    │       │  ~  │  1  │  2  │  3   │  `   │   │ &td_qoc │  (   │  )  │  [   │    ]    │      │
-//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼──────┼─────────┼──────┤
-//    │ capsw │ tab │  4  │  5  │  6   │ kp_= │   │  left   │ down │ up  │ rght │ &td_qoc │ kp_- │
-//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼──────┼─────────┼──────┤
-//    │       │  _  │  7  │  8  │  9   │  0   │   │  kp_-   │  {   │  }  │  !   │    ?    │      │
-//    └───────┴─────┴─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┴──────┴─────────┴──────┘
+//    ┌───────┬─────┬─────┬─────┬──────┬──────┐   ┌─────────┬──────┬─────┬────────┬─────────┬──────┐
+//    │       │     │     │     │      │      │   │         │      │     │        │         │      │
+//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼────────┼─────────┼──────┤
+//    │       │  ~  │  1  │  2  │  3   │  `   │   │ &td_qoc │  (   │  )  │   [    │    ]    │      │
+//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼────────┼─────────┼──────┤
+//    │ capsw │ tab │  4  │  5  │  6   │ kp_= │   │  left   │ down │ up  │  rght  │ &td_qoc │ kp_- │
+//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼────────┼─────────┼──────┤
+//    │       │  _  │  7  │  8  │  9   │  0   │   │  kp_-   │  {   │  }  │ &td_dc │    ?    │      │
+//    └───────┴─────┴─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┴────────┴─────────┴──────┘
 //                        │     │ kp_- │      │   │         │ kp_+ │
 //                        └─────┼──────┼──────┤   ├─────────┼──────┘
 //                              │      │      │   │         │
@@ -257,7 +257,7 @@
   &none        &none            &none          &none          &none          &none              &none            &none                  &none                   &none              &none               &none
   &none        &kp TILDE        &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3   &kp GRAVE          &td_qoc          &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &none
   &caps_word   &kp TAB          &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6   &kp KP_EQUAL       &kp LEFT_ARROW   &kp DOWN_ARROW         &kp UP_ARROW            &kp RIGHT_ARROW    &td_qoc             &kp KP_MINUS
-  &none        &kp UNDERSCORE   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9   &kp N0             &kp KP_MINUS     &kp LEFT_BRACE         &kp RIGHT_BRACE         &kp EXCLAMATION    &kp QUESTION        &none
+  &none        &kp UNDERSCORE   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9   &kp N0             &kp KP_MINUS     &kp LEFT_BRACE         &kp RIGHT_BRACE         &td_dc             &kp QUESTION        &none
                                                &none          &kp KP_MINUS   &none              &none            &kp KP_PLUS
                                                               &none          &none              &none
             >;
