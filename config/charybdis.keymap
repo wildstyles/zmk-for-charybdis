@@ -8,7 +8,7 @@
     combos {
         compatible = "zmk,combos";
 
-        langchange {
+        spotlight {
             bindings = <&kp LG(SPACE)>;
             key-positions = <17 18>;
         };
@@ -23,16 +23,6 @@
             key-positions = <40 41>;
         };
 
-        hyphen {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <41 42>;
-        };
-
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <29 30>;
-        };
-
         enter {
             bindings = <&kp ENTER>;
             key-positions = <49 52>;
@@ -45,31 +35,6 @@
     };
 
     behaviors {
-        homerow: homerow {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <75>;
-            quick-tap-ms = <0>;
-            flavor = "hold-preferred";
-        };
-
-        td_mt: tap_dance_mod_tap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
-        };
-
-        td_qo: tap_dance_qo {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
-        };
-
         td_sl: tap_dance_slash_backslash {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -77,135 +42,62 @@
             bindings = <&kp SLASH>, <&kp BACKSLASH>, <&kp PIPE>;
         };
 
-        td_as: tap_dance_as {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp ASTRK>, <&kp CARET>;
-        };
-
-        td_gr: tap_dance_gr {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
-        };
-
-        td_pa: tap_dance_pa {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp AMPS>, <&kp PERCENT>;
-        };
-
-        td_sc: tap_dance_sc {
+        td_sc: tap_dance_semicolon_colon {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SEMICOLON>, <&kp COLON>;
         };
 
-        td_br: tap_dance_br {
+        td_br: tap_dance_braces {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
         };
 
-        td_bb: tap_dance_bb {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
-        };
-
-        td_do: tap_dance_do {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DOLLAR>, <&kp AT>;
-        };
-
-        td_dc: tap_dance_dc {
+        td_dc: tap_dance_dot_comma_for_uk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LS(LA(LC(F1)))>, <&kp LS(LA(LC(F2)))>;
         };
 
-        td_o: tap_dance_o {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp O>, <&kp SINGLE_QUOTE>;
-        };
-
-        td_qoc: tap_dance_qoc {
+        td_qoc: tap_dance_qoutes {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
         };
 
-        td_qq: tap_dance_qq {
+        td_qq: tap_dance_q_to_escape {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <&kp ESC>;
         };
 
-        td_cc: tap_dance_cc {
+        td_cc: tap_dance_c_to_copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp C>, <&kp LG(C)>;
         };
 
-        td_vv: tap_dance_vv {
+        td_vv: tap_dance_v_to_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp V>, <&kp LG(V)>;
         };
 
-        td_hc: tap_dance_hc {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp KP_MINUS>, <&kp COLON>;
-        };
-
-        htd: htd_kp_space_ctrl {
+        htd: htd_kp_column_semicolumn {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&td_qoc>;
-
-            // hold-trigger-key-positions = <KB_THUMBS KB_RIGHT>;
-            // retro-tap;
-        };
-
-        htw: htd_kp_shift_slash {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&td_sl>;
-
-            // hold-trigger-key-positions = <KB_THUMBS KB_RIGHT>;
-            // retro-tap;
-        };
-
-        htt: htt_kp_space_ctrl {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&td_hc>;
 
             // hold-trigger-key-positions = <KB_THUMBS KB_RIGHT>;
             // retro-tap;
