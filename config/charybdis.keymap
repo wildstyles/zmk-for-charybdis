@@ -88,73 +88,73 @@
 
         BASE {
             bindings = <
-//    ┌─────────────┬───────────┬────────┬─────┬─────────────┬─────┐   ┌─────┬──────────────┬─────┬──────────┬───────────┬─────────────┐
-//    │             │    f1     │   f5   │     │             │     │   │     │              │     │ bt_sel 0 │ bt_sel 1  │   bt_clr    │
-//    ├─────────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
-//    │     esc     │     Q     │   W    │  F  │      P      │  B  │   │  J  │      L       │  U  │    Y     │  &td_sc   │             │
-//    ├─────────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
-//    │ &htd lgui 0 │     A     │ lt 1 R │  S  │      T      │  G  │   │  M  │      N       │  E  │  lt 1 I  │     O     │ mt lalt ent │
-//    ├─────────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼─────────────┤
-//    │             │ mt lsft Z │ lt 2 X │  C  │      D      │  V  │   │  K  │      H       │  ,  │  lt 2 .  │ mt rsft / │             │
-//    └─────────────┴───────────┴────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┴──────────┴───────────┴─────────────┘
-//                                       │     │ mt lctl spc │     │   │     │ mt caps bspc │
-//                                       └─────┼─────────────┼─────┤   ├─────┼──────────────┘
-//                                             │             │     │   │     │
-//                                             └─────────────┴─────┘   └─────┘
-  &none                 &kp F1             &kp F5    &none   &none             &none       &none   &none           &none       &bt BT_SEL 0   &bt BT_SEL 1            &bt BT_CLR
-  &kp ESC               &kp Q              &kp W     &kp F   &kp P             &kp B       &kp J   &kp L           &kp U       &kp Y          &td_sc                  &none
-  &htd LEFT_COMMAND 0   &kp A              &lt 1 R   &kp S   &kp T             &kp G       &kp M   &kp N           &kp E       &lt 1 I        &kp O                   &mt LEFT_ALT RET
-  &none                 &mt LEFT_SHIFT Z   &lt 2 X   &kp C   &kp D             &kp V       &kp K   &kp H           &kp COMMA   &lt 2 DOT      &mt RIGHT_SHIFT SLASH   &none
-                                                     &none   &mt LCTRL SPACE   &none       &none   &mt CAPS BSPC
-                                                             &none             &none       &none
+//    ┌───────────┬───────────┬────────┬─────┬─────────────┬─────┐   ┌─────┬──────────────┬─────┬──────────┬───────────┬───────────┐
+//    │   capsw   │    f1     │   f5   │     │             │     │   │     │              │     │ bt_sel 0 │ bt_sel 1  │  bt_clr   │
+//    ├───────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼───────────┤
+//    │     `     │     Q     │   W    │  F  │      P      │  B  │   │  J  │      L       │  U  │    Y     │     :     │     ;     │
+//    ├───────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼───────────┤
+//    │   kp_-    │     A     │ lt 1 R │  S  │      T      │  G  │   │  M  │      N       │  E  │  lt 1 I  │     O     │  &td_qoc  │
+//    ├───────────┼───────────┼────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┼──────────┼───────────┼───────────┤
+//    │ mt lgui _ │ mt lsft Z │ lt 2 X │  C  │      D      │  V  │   │  K  │      H       │  ,  │  lt 2 .  │ mt rsft / │ mt lalt $ │
+//    └───────────┴───────────┴────────┼─────┼─────────────┼─────┤   ├─────┼──────────────┼─────┴──────────┴───────────┴───────────┘
+//                                     │     │ mt lctl spc │     │   │     │ mt caps bspc │
+//                                     └─────┼─────────────┼─────┤   ├─────┼──────────────┘
+//                                           │             │     │   │     │
+//                                           └─────────────┴─────┘   └─────┘
+  &caps_word                    &kp F1             &kp F5    &none   &none             &none       &none   &none           &none       &bt BT_SEL 0   &bt BT_SEL 1            &bt BT_CLR
+  &kp GRAVE                     &kp Q              &kp W     &kp F   &kp P             &kp B       &kp J   &kp L           &kp U       &kp Y          &kp COLON               &kp SEMICOLON
+  &kp KP_MINUS                  &kp A              &lt 1 R   &kp S   &kp T             &kp G       &kp M   &kp N           &kp E       &lt 1 I        &kp O                   &td_qoc
+  &mt LEFT_COMMAND UNDERSCORE   &mt LEFT_SHIFT Z   &lt 2 X   &kp C   &kp D             &kp V       &kp K   &kp H           &kp COMMA   &lt 2 DOT      &mt RIGHT_SHIFT SLASH   &mt LEFT_ALT DOLLAR
+                                                             &none   &mt LCTRL SPACE   &none       &none   &mt CAPS BSPC
+                                                                     &none             &none       &none
             >;
         };
 
         SYMNUM {
             bindings = <
-//    ┌───────┬─────┬─────┬─────┬──────┬──────┐   ┌─────────┬──────┬─────┬────────┬─────────┬──────┐
-//    │       │     │     │     │      │      │   │         │      │     │        │         │      │
-//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼────────┼─────────┼──────┤
-//    │       │  ~  │  1  │  2  │  3   │  `   │   │ &td_qoc │  (   │  )  │   [    │    ]    │      │
-//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼────────┼─────────┼──────┤
-//    │ capsw │ tab │  4  │  5  │  6   │ kp_= │   │  left   │ down │ up  │  rght  │ &td_qoc │ kp_- │
-//    ├───────┼─────┼─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┼────────┼─────────┼──────┤
-//    │       │  _  │  7  │  8  │  9   │  0   │   │  kp_-   │  {   │  }  │ &td_dc │    ?    │      │
-//    └───────┴─────┴─────┼─────┼──────┼──────┤   ├─────────┼──────┼─────┴────────┴─────────┴──────┘
-//                        │     │ kp_- │      │   │         │ kp_+ │
-//                        └─────┼──────┼──────┤   ├─────────┼──────┘
-//                              │      │      │   │         │
-//                              └──────┴──────┘   └─────────┘
-  &none        &none            &none          &none          &none          &none              &none            &none                  &none                   &none              &none               &none
-  &none        &kp TILDE        &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3   &kp GRAVE          &td_qoc          &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &none
-  &caps_word   &kp TAB          &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6   &kp KP_EQUAL       &kp LEFT_ARROW   &kp DOWN_ARROW         &kp UP_ARROW            &kp RIGHT_ARROW    &td_qoc             &kp KP_MINUS
-  &none        &kp UNDERSCORE   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9   &kp N0             &kp KP_MINUS     &kp LEFT_BRACE         &kp RIGHT_BRACE         &td_dc             &kp QUESTION        &none
-                                               &none          &kp KP_MINUS   &none              &none            &kp KP_PLUS
-                                                              &none          &none              &none
+//    ┌──────┬─────┬─────┬─────┬──────┬──────┐   ┌──────┬────────┬─────┬────────┬─────┬─────┐
+//    │      │     │     │     │      │      │   │      │        │     │        │     │     │
+//    ├──────┼─────┼─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┼────────┼─────┼─────┤
+//    │  ~   │  !  │  1  │  2  │  3   │  *   │   │  %   │   (    │  )  │   [    │  ]  │  ^  │
+//    ├──────┼─────┼─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┼────────┼─────┼─────┤
+//    │ kp_+ │ tab │  4  │  5  │  6   │ kp_= │   │ left │  down  │ up  │  rght  │  &  │  |  │
+//    ├──────┼─────┼─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┼────────┼─────┼─────┤
+//    │  @   │  #  │  7  │  8  │  9   │  0   │   │ kp_= │ &td_br │  <  │ &td_dc │  ?  │  \  │
+//    └──────┴─────┴─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┴────────┴─────┴─────┘
+//                       │     │ lclk │      │   │      │  rclk  │
+//                       └─────┼──────┼──────┤   ├──────┼────────┘
+//                             │      │      │   │      │
+//                             └──────┴──────┘   └──────┘
+  &none         &none             &none          &none          &none          &none              &none            &none                  &none                   &none              &none               &none
+  &kp TILDE     &kp EXCLAMATION   &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3   &kp ASTRK          &kp PERCENT      &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp CARET
+  &kp KP_PLUS   &kp TAB           &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6   &kp KP_EQUAL       &kp LEFT_ARROW   &kp DOWN_ARROW         &kp UP_ARROW            &kp RIGHT_ARROW    &kp AMPS            &kp PIPE
+  &kp AT        &kp HASH          &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9   &kp N0             &kp KP_EQUAL     &td_br                 &kp LESS_THAN           &td_dc             &kp QUESTION        &kp BACKSLASH
+                                                 &none          &mkp LCLK      &none              &none            &mkp RCLK
+                                                                &none          &none              &none
             >;
         };
 
         SYMNUM1 {
             bindings = <
-//    ┌─────┬──────┬─────┬─────┬──────┬──────┐   ┌──────┬────────┬─────┬─────┬────────┬─────┐
-//    │     │      │     │     │      │      │   │      │        │     │     │        │     │
-//    ├─────┼──────┼─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┼─────┼────────┼─────┤
-//    │     │ vold │     │     │      │ volu │   │      │        │     │  |  │   \    │     │
-//    ├─────┼──────┼─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┼─────┼────────┼─────┤
-//    │     │  !   │  @  │  #  │  ^   │  %   │   │  %   │   &    │  *  │  _  │   $    │     │
-//    ├─────┼──────┼─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┼─────┼────────┼─────┤
-//    │     │ bri- │     │     │      │ bri+ │   │ kp_= │ &td_br │  <  │  >  │ &td_sl │     │
-//    └─────┴──────┴─────┼─────┼──────┼──────┤   ├──────┼────────┼─────┴─────┴────────┴─────┘
-//                       │     │ lclk │      │   │      │  rclk  │
-//                       └─────┼──────┼──────┤   ├──────┼────────┘
-//                             │      │      │   │      │
-//                             └──────┴──────┘   └──────┘
-  &none   &none                  &none    &none      &none       &none                      &none          &none       &none           &none              &none           &none
-  &none   &kp C_VOL_DN           &none    &none      &none       &kp C_VOLUME_UP            &none          &none       &none           &kp PIPE           &kp BACKSLASH   &none
-  &none   &kp EXCLAMATION        &kp AT   &kp HASH   &kp CARET   &kp PERCENT                &kp PERCENT    &kp AMPS    &kp ASTRK       &kp UNDERSCORE     &kp DOLLAR      &none
-  &none   &kp C_BRIGHTNESS_DEC   &none    &none      &none       &kp C_BRIGHTNESS_INC       &kp KP_EQUAL   &td_br      &kp LESS_THAN   &kp GREATER_THAN   &td_sl          &none
-                                          &none      &mkp LCLK   &none                      &none          &mkp RCLK
-                                                     &none       &none                      &none
+//    ┌─────┬──────┬─────┬─────┬──────┬──────┐   ┌─────┬──────┬─────┬─────┬─────┬─────┐
+//    │     │      │     │     │      │      │   │     │      │     │     │     │     │
+//    ├─────┼──────┼─────┼─────┼──────┼──────┤   ├─────┼──────┼─────┼─────┼─────┼─────┤
+//    │     │ vold │     │     │      │ volu │   │     │      │     │     │     │     │
+//    ├─────┼──────┼─────┼─────┼──────┼──────┤   ├─────┼──────┼─────┼─────┼─────┼─────┤
+//    │     │      │     │     │      │      │   │     │      │     │     │     │     │
+//    ├─────┼──────┼─────┼─────┼──────┼──────┤   ├─────┼──────┼─────┼─────┼─────┼─────┤
+//    │     │ bri- │     │     │      │ bri+ │   │     │      │     │     │     │     │
+//    └─────┴──────┴─────┼─────┼──────┼──────┤   ├─────┼──────┼─────┴─────┴─────┴─────┘
+//                       │     │ lclk │      │   │     │ rclk │
+//                       └─────┼──────┼──────┤   ├─────┼──────┘
+//                             │      │      │   │     │
+//                             └──────┴──────┘   └─────┘
+  &none   &none                  &none   &none   &none       &none                      &none   &none       &none   &none   &none   &none
+  &none   &kp C_VOL_DN           &none   &none   &none       &kp C_VOLUME_UP            &none   &none       &none   &none   &none   &none
+  &none   &none                  &none   &none   &none       &none                      &none   &none       &none   &none   &none   &none
+  &none   &kp C_BRIGHTNESS_DEC   &none   &none   &none       &kp C_BRIGHTNESS_INC       &none   &none       &none   &none   &none   &none
+                                         &none   &mkp LCLK   &none                      &none   &mkp RCLK
+                                                 &none       &none                      &none
             >;
         };
     };
